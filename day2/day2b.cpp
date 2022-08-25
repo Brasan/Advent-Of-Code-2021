@@ -67,6 +67,5 @@ int main() {
     std::cout << "Depth: " << depth << std::endl;
     std::cout << horizontal * depth << std::endl;
 
-    int stop = 0;
-    std::cin >> stop;
+    std::cin.get();
 }
