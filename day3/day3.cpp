@@ -10,7 +10,7 @@
 
 #define LOG(x) std::cout << x << std::endl
 
-int flipBits2(int n, int k) { //Shamelessly stolen from Bernhard Barker on stackoverflow
+int flipBits(int n, int k) { //Shamelessly stolen from Bernhard Barker on stackoverflow
 	int mask = (1 << k) - 1;
 	return ~n & mask;
 }
@@ -53,11 +53,11 @@ int main() {
 		}
 	});
 
-	LOG(bit_holder);
+
 	gamma_rate = std::stoi(bit_holder, 0, 2);
-	epsilon_rate = flipBits2(gamma_rate, LINE_LENGTH);
-	LOG(gamma_rate);
-	LOG(epsilon_rate);
+	epsilon_rate = flipBits(gamma_rate, LINE_LENGTH);
+
+	LOG("Result: ");
 	LOG(gamma_rate * epsilon_rate);
 	std::cin.get();
 
